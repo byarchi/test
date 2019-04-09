@@ -1,17 +1,19 @@
-var leftBorderWidth = 1;
-let second = 2;
-const pi = 3.14;
-let persone = {
-    name: 'John',
-    age: 25,
-    isMarried: false
+var money = prompt("Ваш бюджет на месяц");
+var time = prompt("Введите дату  формате YYYY-MM-DD");
+var appData = {
+        budget: money,
+        timeData: time,
+        expenses: {
+            expensesDescription: prompt('Ведите обязательную статью расходов в этом месяце'),
+            expensesMoney: prompt('Во сколько это обойдется')
+        },
+        optionalExpenses: {
+
+        },
+        income: [
+
+        ],
+        savings: true,
 };
 
-console.log(persone['name']);
-
-let arr = ['plum.png', 'ornge.jpg', 'apple.bmp'];
-
-console.log(arr[2]);
-
-let answer = prompt('Есть ли вам 18', 'Да');
-console.log(typeof(persone));
+alert("Ваш бюджет на один день " + appData.budget/30 + " рублей.");
